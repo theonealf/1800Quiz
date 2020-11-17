@@ -11,6 +11,7 @@ export class QuizConfig {
     showClock: boolean;
     showPager: boolean;
     theme: string;
+    issubmitted: boolean;
 
     constructor(data: any) {
         data = data || {};
@@ -25,5 +26,6 @@ export class QuizConfig {
         this.shuffleOptions = data.shuffleOptions;
         this.showClock = data.showClock;
         this.showPager = data.showPager;
+        this.issubmitted = data.issubmitted;
     }
 }

@@ -12,10 +12,11 @@ export class QuizService {
 
   getAll() {
     return [
+      { id: 'data/hur1800.json', name: 'Hur 1800tal är du' },
       { id: 'data/javascript.json', name: 'JavaScript' },
       { id: 'data/aspnet.json', name: 'Asp.Net' },
       { id: 'data/csharp.json', name: 'C Sharp' },
-      { id: 'data/designPatterns.json', name: 'Design Patterns' }
+      { id: 'data/designPatterns.json', name: 'Design Patterns' }      
     ];
   }
 

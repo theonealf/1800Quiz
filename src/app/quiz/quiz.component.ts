@@ -12,23 +12,27 @@ import { Option, Question, Quiz, QuizConfig } from '../models/index';
 })
 export class QuizComponent implements OnInit {
   quizes: any[];
-  quiz: Quiz = new Quiz(null);
+  quiz: Quiz = new Quiz(null, null);
   mode = 'quiz';
   quizName: string;
   config: QuizConfig = {
     'allowBack': true,
     'allowReview': false,
-    'autoMove': false,  // if true, it will move to next question automatically when answered.
+    'autoMove': true,  // if true, it will move to next question automatically when answered.
     'duration': 300,  // indicates the time (in secs) in which quiz needs to be completed. 0 means unlimited.
     'pageSize': 1,
     'requiredAll': true,  // indicates if you must answer all the questions before submitting.
     'richText': false,
-    'shuffleQuestions': false,
-    'shuffleOptions': false,
-    'showClock': false,
+    'shuffleQuestions': true,
+    'shuffleOptions': true,
+    'showClock': true,
     'showPager': true,
-    'theme': 'none'
+    'theme': 'none',
+    'issubmitted': false
   };
+  currentscore:number= 0;
+  mainscore:any= 0;
+  epoktext:any="";
 
   pager = {
     index: 0,
@@ -40,6 +44,9 @@ export class QuizComponent implements OnInit {
   endTime: Date;
   ellapsedTime = '00:00';
   duration = '';
+  show=false;
+  visamainscore=false;
+  visaqiuzvaltop= false;
 
   constructor(private quizService: QuizService) { }
 
@@ -47,16 +54,21 @@ export class QuizComponent implements OnInit {
     this.quizes = this.quizService.getAll();
     this.quizName = this.quizes[0].id;
     this.loadQuiz(this.quizName);
+    this.config.issubmitted = false;
+    
   }
 
   loadQuiz(quizName: string) {
     this.quizService.get(quizName).subscribe(res => {
-      this.quiz = new Quiz(res);
+      this.quiz = new Quiz(res, this.config);
       this.pager.count = this.quiz.questions.length;
       this.startTime = new Date();
       this.ellapsedTime = '00:00';
       this.timer = setInterval(() => { this.tick(); }, 1000);
       this.duration = this.parseTime(this.config.duration);
+      this.config.issubmitted = false;
+      this.mainscore=0;
+      this.goTo(0);
     });
     this.mode = 'quiz';
   }
@@ -64,8 +76,8 @@ export class QuizComponent implements OnInit {
   tick() {
     const now = new Date();
     const diff = (now.getTime() - this.startTime.getTime()) / 1000;
-    if (diff >= this.config.duration) {
-      this.onSubmit();
+    if (diff >= this.config.duration && this.config.showClock == true && this.config.issubmitted == false) {     
+      this.onSubmit();      
     }
     this.ellapsedTime = this.parseTime(diff);
   }
@@ -92,6 +104,29 @@ export class QuizComponent implements OnInit {
       this.goTo(this.pager.index + 1);
     }
   }
+  onClick(question: Question, option: Option) {
+    if (question.questionTypeId === 1) {
+      question.options.forEach((x) => { 
+        if(x.id !== option.id){
+          x.selected = false
+        }else{ 
+        x.selected = true; }
+      });
+    }
+
+    if (this.config.autoMove) {
+      
+      if (this.pager.index > this.pager.size){             
+        this.onSubmit();
+      }else{
+         this.goTo(this.pager.index + 1);
+      }
+
+      this.mainscore+= this.currentscore;
+      this.currentscore= 0;
+     
+    }
+  }
 
   goTo(index: number) {
     if (index >= 0 && index < this.pager.count) {
@@ -110,10 +145,48 @@ export class QuizComponent implements OnInit {
 
   onSubmit() {
     let answers = [];
-    this.quiz.questions.forEach(x => answers.push({ 'quizId': this.quiz.id, 'questionId': x.id, 'answered': x.answered }));
-
+    this.quiz.questions.forEach(x => { 
+      x.options.forEach(y => { 
+        console.log(y.selected)
+        if(y.selected == true){
+          this.mainscore+= y.points
+        }; 
+      })
+    this.quiz.questions.forEach(x => answers.push({ 'quizId': this.quiz.id, 'questionId': x.id, 'answered': x.answered,'points': x.points }));
+          console.log(x.options);         
+     
+    });
     // Post your data to the server here. answers contains the questionId and the users' answer.
     console.log(this.quiz.questions);
-    this.mode = 'result';
+    if(this.quiz.id == 2){
+      this.mode = '1800tal';
+      this.typavepok(this.mainscore);
+    }else{
+      this.mode = 'result';
+    }    
+    this.config.issubmitted = true;
   }
+
+  typavepok(score){
+    if(score== 0){
+      this.epoktext="Du har inte valt något än"
+    }
+    this.quiz.epok.forEach((y) => { 
+        console.log(y);
+        if(score >= y.min && score <= y.max){
+          this.epoktext = y.text;
+          return false;
+        }
+    });
+    
+    
+  }
+  restart(){
+    
+    this.loadQuiz('data/hur1800.json');   
+    this.mode = 'quiz'; 
+  }
+  
+
+  
 }

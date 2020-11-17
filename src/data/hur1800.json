@@ -1,0 +1,153 @@
+{
+    "id": 2,
+    "name": "Hur 1800-tal är du?",
+    "description": "Quiz för att jämföra epoker",
+    "questions": [
+        {
+            "id": 1010,
+            "name": "Vad är ditt arbete?",
+            "questionTypeId": 1,
+            "options": [
+                {
+                    "id": 1055,
+                    "questionId": 1010,
+                    "name": "Jordbrukare",                    
+                    "points": 10,
+                    "isAnswer": false
+                },
+                {
+                    "id": 1056,
+                    "questionId": 1010,
+                    "name": "Influencer",
+                    "points": 1,
+                    "isAnswer": true
+                },
+                {
+                    "id": 1057,
+                    "questionId": 1010,
+                    "name": "Präst",
+                    "points": 7,
+                    "isAnswer": false
+                },
+                {
+                    "id": 1058,
+                    "questionId": 1010,
+                    "name": "Trafikledare",
+                    "points": 4,
+                    "isAnswer": false
+                }
+            ],
+            "questionType": {
+                "id": 1,
+                "name": "Multiple Choice",
+                "isActive": true
+            }
+        },
+        {
+            "id": 1011,
+            "name": "Vad äter du till middag?",
+            "questionTypeId": 1,
+            "options": [
+                {
+                    "id": 1055,
+                    "questionId": 1010,
+                    "name": "Thaimat",
+                    "points": 1,
+                    "isAnswer": false
+                },
+                {
+                    "id": 1057,
+                    "questionId": 1010,
+                    "name": "Skulor",
+                    "points": 10,
+                    "isAnswer": false
+                },
+                {
+                    "id": 1056,
+                    "questionId": 1010,
+                    "name": "Ris",
+                    "points": 4,
+                    "isAnswer": true
+                },
+                {
+                    "id": 1058,
+                    "questionId": 1010,
+                    "name": "Potatis",
+                    "points": 7,
+                    "isAnswer": false
+                }
+            ],
+            "questionType": {
+                "id": 1,
+                "name": "Multiple Choice",
+                "isActive": true
+            }
+        },
+        {
+            "id": 1012,
+            "name": "Hur blir du transporterad?",
+            "questionTypeId": 1,
+            "options": [
+                {
+                    "id": 1055,
+                    "questionId": 1010,
+                    "name": "Flyg",
+                    "points": 1,
+                    "isAnswer": true
+                },
+                {
+                    "id": 1057,
+                    "questionId": 1010,
+                    "name": "Båt",
+                    "points": 7,
+                    "isAnswer": false
+                },
+                {
+                    "id": 1056,
+                    "questionId": 1010,
+                    "name": "Bil",
+                    "points": 4,
+                    "isAnswer": false
+                },
+                {
+                    "id": 1058,
+                    "questionId": 1010,
+                    "name": "Häst",
+                    "points": 10,
+                    "isAnswer": false
+                }
+            ],
+            "questionType": {
+                "id": 1,
+                "name": "Multiple Choice",
+                "isActive": true
+            }
+        }
+    ],
+    "epok":[
+        {
+            "typ":1800,
+            "max":30,
+            "min":22,
+            "text": "Du är typisk 1800-tal!"
+        },
+        {
+            "typ":1900,
+            "max":21,
+            "min":13,            
+            "text": "Du är en typisk 1900-tals människa"
+        },
+        {
+            "typ":1990,
+            "max":12,
+            "min":4,
+            "text": "Du är från ett typisk 1990-tal!"
+        },
+        {
+            "typ":2000,
+            "max":3,
+            "min":1,            
+            "text": "Du är en typisk 2000-tals människa"
+        }
+    ]
+}

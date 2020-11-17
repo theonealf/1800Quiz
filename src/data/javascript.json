@@ -11,25 +11,29 @@
                 {
                     "id": 1055,
                     "questionId": 1010,
-                    "name": "<javascript>",
+                    "name": "<javascript>",                    
+                    "points": 2,
                     "isAnswer": false
                 },
                 {
                     "id": 1056,
                     "questionId": 1010,
                     "name": "<script>",
+                    "points": 5,
                     "isAnswer": true
                 },
                 {
                     "id": 1057,
                     "questionId": 1010,
                     "name": "<js>",
+                    "points": 7,
                     "isAnswer": false
                 },
                 {
                     "id": 1058,
                     "questionId": 1010,
                     "name": "None of the above",
+                    "points": 3,
                     "isAnswer": false
                 }
             ],
@@ -48,24 +52,28 @@
                     "id": 1055,
                     "questionId": 1010,
                     "name": "while()",
+                    "points": 6,
                     "isAnswer": false
                 },
                 {
                     "id": 1057,
                     "questionId": 1010,
                     "name": "loop",
+                    "points": 4,
                     "isAnswer": false
                 },
                 {
                     "id": 1056,
                     "questionId": 1010,
                     "name": "forEach",
+                    "points": 10,
                     "isAnswer": true
                 },
                 {
                     "id": 1058,
                     "questionId": 1010,
                     "name": "takeUntil",
+                    "points": 1,
                     "isAnswer": false
                 }
             ],
@@ -84,24 +92,28 @@
                     "id": 1055,
                     "questionId": 1010,
                     "name": "let has local scope",
+                    "points": 5,
                     "isAnswer": true
                 },
                 {
                     "id": 1057,
                     "questionId": 1010,
                     "name": "Both are same",
+                    "points": 2,
                     "isAnswer": false
                 },
                 {
                     "id": 1056,
                     "questionId": 1010,
                     "name": "var is new data type",
+                    "points": 2,
                     "isAnswer": false
                 },
                 {
                     "id": 1058,
                     "questionId": 1010,
                     "name": "let consumes more cpu and ram",
+                    "points": 2,
                     "isAnswer": false
                 }
             ],
@@ -120,24 +132,28 @@
                     "id": 1055,
                     "questionId": 1010,
                     "name": "A Language based on Javascript",
+                    "points": 5,
                     "isAnswer": true
                 },
                 {
                     "id": 1057,
                     "questionId": 1010,
                     "name": "script that runs on browser",
+                    "points": 2,
                     "isAnswer": false
                 },
                 {
                     "id": 1056,
                     "questionId": 1010,
                     "name": "A DataType Collection of Javascript",
+                    "points": 2,
                     "isAnswer": false
                 },
                 {
                     "id": 1058,
                     "questionId": 1010,
                     "name": "None of the above",
+                    "points": 2,
                     "isAnswer": false
                 }
             ],
@@ -156,24 +172,28 @@
                     "id": 1055,
                     "questionId": 1010,
                     "name": "a -> { return b; }",
+                    "points": 2,
                     "isAnswer": false
                 },
                 {
                     "id": 1057,
                     "questionId": 1010,
                     "name": "x <= x + y;",
+                    "points": 2,
                     "isAnswer": false
                 },
                 {
                     "id": 1056,
                     "questionId": 1010,
                     "name": "x <- x + 5;",
+                    "points": 2,
                     "isAnswer": false
                 },
                 {
                     "id": 1058,
                     "questionId": 1010,
                     "name": "x => x + 5;",
+                    "points": 5,
                     "isAnswer": true
                 }
             ],
@@ -192,24 +212,28 @@
                     "id": 1055,
                     "questionId": 1010,
                     "name": "Generator Functions",
+                    "points": 2,
                     "isAnswer": false
                 },
                 {
                     "id": 1057,
                     "questionId": 1010,
                     "name": "Arrow Functions",
+                    "points": 2,
                     "isAnswer": false
                 },
                 {
                     "id": 1056,
                     "questionId": 1010,
                     "name": "Template Strings",
+                    "points": 5,
                     "isAnswer": true
                 },
                 {
                     "id": 1058,
                     "questionId": 1010,
                     "name": "Set Data Structure",
+                    "points": 2,
                     "isAnswer": false
                 }
             ],
@@ -228,24 +252,28 @@
                     "id": 1055,
                     "questionId": 1010,
                     "name": "Class syntex",
+                    "points": 2,
                     "isAnswer": false
                 },
                 {
                     "id": 1056,
                     "questionId": 1010,
                     "name": "Object.assign()",
+                    "points": 5,
                     "isAnswer": true
                 },
                 {
                     "id": 1057,
                     "questionId": 1010,
                     "name": "map data structure",
+                    "points": 2,
                     "isAnswer": false
                 },
                 {
                     "id": 1058,
                     "questionId": 1010,
                     "name": "Array.includes(obj);",
+                    "points": 2,
                     "isAnswer": false
                 }
             ],
@@ -264,24 +292,28 @@
                     "id": 1055,
                     "questionId": 1010,
                     "name": "=== throws syntex error",
+                    "points": 2,
                     "isAnswer": false
                 },
                 {
                     "id": 1056,
                     "questionId": 1010,
                     "name": "== checks values only, === checks types as well",
+                    "points": 5,
                     "isAnswer": true
                 },
                 {
                     "id": 1057,
                     "questionId": 1010,
                     "name": "=== is reference type check only",
+                    "points": 2,
                     "isAnswer": false
                 },
                 {
                     "id": 1058,
                     "questionId": 1010,
                     "name": "Both are same",
+                    "points": 2,
                     "isAnswer": false
                 }
             ],
@@ -300,24 +332,28 @@
                     "id": 1055,
                     "questionId": 1010,
                     "name": ".map()",
+                    "points": 2,
                     "isAnswer": false
                 },
                 {
                     "id": 1057,
                     "questionId": 1010,
                     "name": ".includes()",
+                    "points": 2,
                     "isAnswer": false
                 },
                 {
                     "id": 1056,
                     "questionId": 1010,
                     "name": ".subscribe()",
+                    "points": 5,
                     "isAnswer": true
                 },
                 {
                     "id": 1058,
                     "questionId": 1010,
                     "name": ".flatMap()",
+                    "points": 2,
                     "isAnswer": false
                 }
             ],
@@ -336,24 +372,28 @@
                     "id": 1055,
                     "questionId": 1010,
                     "name": "['a', 7, 'c']",
+                    "points": 5,
                     "isAnswer": true
                 },
                 {
                     "id": 1056,
                     "questionId": 1010,
                     "name": "['a', 7, 7, 'b', 'c']",
+                    "points": 2,
                     "isAnswer": false
                 },
                 {
                     "id": 1057,
                     "questionId": 1010,
                     "name": "['a', 'b', 'c']",
+                    "points": 2,
                     "isAnswer": false
                 },
                 {
                     "id": 1058,
                     "questionId": 1010,
                     "name": "['7', 7, 'c']",
+                    "points": 2,
                     "isAnswer": false
                 }
             ],
@@ -362,6 +402,32 @@
                 "name": "Multiple Choice",
                 "isActive": true
             }
+        }
+    ],
+    "epok":[
+        {
+            "typ":2000,
+            "max":30,
+            "min":21,
+            "text": "Du är en typisk 2000tals människa"
+        },
+        {
+            "typ":1990,
+            "max":21,
+            "min":12,
+            "text": "Du är från ett typisk 1990tal!"
+        },
+        {
+            "typ":1900,
+            "max":12,
+            "min":7,
+            "text": "Du är en typisk 1900tals människa"
+        },
+        {
+            "typ":1800,
+            "max":7,
+            "min":3,
+            "text": "Du är typisk 1800tal!"
         }
     ]
 }
