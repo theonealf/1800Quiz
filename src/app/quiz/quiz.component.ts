@@ -126,6 +126,12 @@ export class QuizComponent implements OnInit {
       this.currentscore= 0;
      
     }
+    return false;
+  }
+
+  changeMode(newmode){
+    this.mode= newmode;
+    return false;
   }
 
   goTo(index: number) {
@@ -133,6 +139,7 @@ export class QuizComponent implements OnInit {
       this.pager.index = index;
       this.mode = 'quiz';
     }
+    return false;
   }
 
   isAnswered(question: Question) {
@@ -165,6 +172,8 @@ export class QuizComponent implements OnInit {
       this.mode = 'result';
     }    
     this.config.issubmitted = true;
+    clearInterval(this.timer);
+    return false;
   }
 
   typavepok(score){

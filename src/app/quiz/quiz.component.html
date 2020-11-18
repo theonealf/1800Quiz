@@ -64,8 +64,8 @@
   </div>
   <hr />
   <div *ngIf="mode!='result' && show==true">
-    <button class="btn btn-warning" (click)="mode = 'quiz'">Frågorna</button>
-    <button class="btn btn-info" (click)="mode = 'review'">Överblick</button>
+    <button class="btn btn-warning" (click)="changeMode('quiz')">Frågorna</button>
+    <button class="btn btn-info" (click)="changeMode('review')">Överblick</button>
     <button class="btn btn-primary" (click)="onSubmit();">Skicka in quiz</button>
   </div>
 
