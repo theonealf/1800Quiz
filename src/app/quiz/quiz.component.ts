@@ -92,12 +92,16 @@ export class QuizComponent implements OnInit {
       this.goTo(this.pager.index + 1);
     }
   }
-
+  changeMode(newmode){
+    this.mode= newmode;
+    return false;
+  }
   goTo(index: number) {
     if (index >= 0 && index < this.pager.count) {
       this.pager.index = index;
       this.mode = 'quiz';
     }
+    return false;
   }
 
   isAnswered(question: Question) {
@@ -115,5 +119,7 @@ export class QuizComponent implements OnInit {
     // Post your data to the server here. answers contains the questionId and the users' answer.
     console.log(this.quiz.questions);
     this.mode = 'result';
+    clearInterval(this.timer);
+    return false;
   }
 }
