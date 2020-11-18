@@ -7,6 +7,8 @@ export class QuizService {
   constructor(private http: HttpClient) { }
 
   get(url: string) {
+
+    url = "/DesktopModules/aj_skrivbokenAngular/dist/" + url;
     return this.http.get(url);
   }
 
